@@ -1,0 +1,32 @@
+{
+  "name": "express-sessions",
+  "version": "1.0.0",
+  "description": "express-sessions",
+  "main": "index.js",
+  "scripts": {
+    "devStart": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "sessions-cookies"
+  ],
+  "author": "vinay",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "connect-flash": "^0.1.1",
+    "connect-mongo": "^4.4.1",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "express-router": "0.0.1",
+    "express-session": "^1.17.2",
+    "flash": "^1.1.0",
+    "mongoose": "^5.12.14",
+    "node-schedule": "^2.0.0",
+    "nodemon": "^2.0.7",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0",
+    "shortid": "^2.2.16",
+    "twilio": "^3.64.0"
+  }
+}
