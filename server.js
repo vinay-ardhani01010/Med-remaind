@@ -81,9 +81,9 @@ app.use(flash());
         //console.log(user.remainders)
         user.remainders.forEach(rem => {
             if(!rem.isSheduled){
-               await  schedule.scheduleJob(rem.unique_id,rem.cron_expression, function(){
+               await  schedule.scheduleJob(rem.unique_id,rem.cron_expression, async function(){
                      console.log("sheduling being sent.....")
-                    client.messages
+                    qwiat client.messages
                     .create({
                        from: 'whatsapp:+14155238886',
                        body: `Hi there! it's time to take ${rem.medName} please take it`,
