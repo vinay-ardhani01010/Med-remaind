@@ -14,8 +14,6 @@ const account_sid = process.env.TWILIO_ACCOUNT_SID;
 const auth_token = process.env.TWILIO_AUTH_TOKEN;
 console.log(account_sid,auth_token);
 const client = require('twilio')(account_sid, auth_token);
-
-
 const schedule = require('node-schedule');
 
 /************************ twilio-config **********/
