@@ -11,7 +11,7 @@ const bcrypt = require('bcryptjs');
 /************************ twilio-config **********/
 
 var TWILIO_ACCOUNT_SID = "ACf31d5d12f67b20f58a7aa1e1b5639c48"
-var TWILIO_AUTH_TOKEN = "94dec324297f367fd00d7ab158f5f90b"
+var TWILIO_AUTH_TOKEN = "d1b491f9b013230d9f188d20d73e0fc"
 const accountSid = TWILIO_ACCOUNT_SID;
 const authToken = TWILIO_AUTH_TOKEN;
 const client = require('twilio')(accountSid, authToken);
