@@ -81,7 +81,7 @@ app.use(flash());
         //console.log(user.remainders)
         user.remainders.forEach(rem => {
             if(!rem.isSheduled){
-                schedule.scheduleJob(rem.unique_id,rem.cron_expression, function(){
+               await  schedule.scheduleJob(rem.unique_id,rem.cron_expression, function(){
                      console.log("sheduling being sent.....")
                     client.messages
                     .create({
