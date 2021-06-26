@@ -12,6 +12,12 @@ require('dotenv').config()
 /************************ twilio-config **********/
 
 const client = require('twilio')(process.env.TWILIO_ACCOUNT_SID, process.env.TWILIO_AUTH_TOKEN);
+
+var TWILIO_ACCOUNT_SID = "ACf31d5d12f67b20f58a7aa1e1b5639c48"
+var TWILIO_AUTH_TOKEN = "d1b491f9b013230d9f188d20d73e0fc"
+const accountSid = TWILIO_ACCOUNT_SID;
+const authToken = TWILIO_AUTH_TOKEN;
+const client = require('twilio')(accountSid, authToken);
 const schedule = require('node-schedule');
 
 /************************ twilio-config **********/
@@ -221,6 +227,6 @@ app.use(flash());
 
 /************ express-server **********/
 
-app.listen(3000,()=> console.log("listening at port 3000"));
+app.listen(process.env.PORT || 3000,()=> console.log("listening at port 3000"));
 
-/************ express-server **********/
+/************ express-server ***********/
