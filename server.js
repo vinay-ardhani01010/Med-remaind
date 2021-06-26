@@ -81,7 +81,7 @@ app.use(flash());
         //console.log(user.remainders)
         user.remainders.forEach(rem => {
             if(!rem.isSheduled){
-               await  schedule.scheduleJob(rem.unique_id,rem.cron_expression, async function(){
+                schedule.scheduleJob(rem.unique_id,rem.cron_expression, async function(){
                      console.log("sheduling being sent.....")
                     qwiat client.messages
                     .create({
