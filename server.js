@@ -83,7 +83,7 @@ app.use(flash());
             if(!rem.isSheduled){
                 schedule.scheduleJob(rem.unique_id,rem.cron_expression, async function(){
                      console.log("sheduling being sent.....")
-                    qwiat client.messages
+                    await client.messages
                     .create({
                        from: 'whatsapp:+14155238886',
                        body: `Hi there! it's time to take ${rem.medName} please take it`,
