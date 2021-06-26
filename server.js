@@ -7,14 +7,11 @@ const User_db = require('./models/users.js');
 var flash = require('connect-flash');
 app.set('view engine','ejs');
 const bcrypt = require('bcryptjs');
+require('dotenv').config()
 
 /************************ twilio-config **********/
 
-var TWILIO_ACCOUNT_SID = "ACf31d5d12f67b20f58a7aa1e1b5639c48"
-var TWILIO_AUTH_TOKEN = "94dec324297f367fd00d7ab158f5f90b"
-const accountSid = TWILIO_ACCOUNT_SID;
-const authToken = TWILIO_AUTH_TOKEN;
-const client = require('twilio')(accountSid, authToken);
+const client = require('twilio')(process.env.TWILIO_ACCOUNT_SID, process.env.TWILIO_AUTH_TOKEN);
 const schedule = require('node-schedule');
 
 /************************ twilio-config **********/
