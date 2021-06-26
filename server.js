@@ -78,6 +78,7 @@ app.use(flash());
 
  app.get('/',checkAuthenticated,async (req,res)=>{
         var user = await User_db.findOne({_id : req.user._id});
+        console.log(user.remainders)
         user.remainders.forEach(rem => {
             if(!rem.isSheduled){
                 schedule.scheduleJob(rem.unique_id,rem.cron_expression, function(){
