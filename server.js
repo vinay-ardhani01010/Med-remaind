@@ -81,6 +81,7 @@ app.use(flash());
         user.remainders.forEach(rem => {
             if(!rem.isSheduled){
                 schedule.scheduleJob(rem.unique_id,rem.cron_expression, function(){
+                     console.log("sheduling being sent.....")
                     client.messages
                     .create({
                        from: 'whatsapp:+14155238886',
